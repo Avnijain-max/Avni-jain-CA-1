@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>✦ My AI</h2>
+        </div>
+
+        <nav class="sidebar-menu">
+            <button class="menu-btn" id="new-chat">＋ New Chat</button>
+            <button class="menu-btn" id="search-chats">🔍 Search Chats</button>
+            <button class="menu-btn" id="open-library">📚 Library</button>
+        </nav>
+
+        <div class="chat-history" id="chat-history">
+            <h4>Today</h4>
+            <div class="chat-item">Explore HTML Basics</div>
+            <div class="chat-item">CSS Project Ideas</div>
+            <div class="chat-item">Operating System Notes</div>
+
+            <h4 class="history-heading">Yesterday</h4>
+            <div class="chat-item">Introduction to JavaScript</div>
+            <div class="chat-item">Python Programming Basics</div>
+            <div class="chat-item">Computer Networks Notes</div>
+        </div>
+
+        <button class="user-profile" id="user-profile">
+            <div class="profile-icon">U</div>
+            <div class="profile-info">
+                <h4>User</h4>
+                <p>Free Plan</p>
+            </div>
+            <span class="profile-arrow">⌄</span>
+        </button>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="main-content">
+
+        <header class="top-header">
+            <h3>My AI <span>⌄</span></h3>
+            <button class="share-btn" id="share-btn">↗ Share</button>
+        </header>
+
+        <!-- Welcome Screen -->
+        <section class="welcome-section" id="welcome-section">
+            <div class="ai-icon">✦</div>
+            <h1>What can I help with?</h1>
+            <p>Your AI assistant for learning, coding,<br>
+                ideas, and everyday questions.</p>
+
+            <div class="suggestion-container">
+
+                <button class="suggestion-card"
+                    data-prompt="Teach me the basics of HTML with examples.">
+                    <span>💻</span>
+                    <h4>Learn HTML</h4>
+                    <p>Explore the basics of web development.</p>
+                </button>
+
+                <button class="suggestion-card"
+                    data-prompt="Suggest creative CSS projects for a beginner.">
+                    <span>🎨</span>
+                    <h4>CSS Projects</h4>
+                    <p>Discover creative website ideas.</p>
+                </button>
+
+                <button class="suggestion-card"
+                    data-prompt="Help me prepare computer science study notes.">
+                    <span>📖</span>
+                    <h4>Study Notes</h4>
+                    <p>Understand computer science topics.</p>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- Messages appear here -->
+        <section class="message-list" id="message-list"
+            aria-live="polite"></section>
+
+        <!-- Message Input -->
+        <footer class="chat-input-area">
+            <div class="input-box">
+
+                <button class="attach-btn" id="attach-btn"
+                    aria-label="Add attachment" title="Attach a file">＋</button>
+
+                <input type="file" id="file-input" hidden>
+
+                <textarea id="user-input"
+                    placeholder="Message My AI..." rows="1"></textarea>
+
+                <button class="send-btn" id="send-btn"
+                    aria-label="Send message" title="Send message">↑</button>
+            </div>
+
+            <p class="file-status" id="file-status"></p>
+            <p class="disclaimer">
+                My AI can make mistakes. Check important information.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
